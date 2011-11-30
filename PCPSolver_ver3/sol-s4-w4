@@ -1,0 +1,697 @@
+Instance 1:
+4 4 24 1 0.000000
+1101  100   1     0     
+1     0     100   1     
+
+Solvable!
+
+ 0 0 1 0
+ 1 1 0 0
+Gcd: 1
+Original Direction: upmask 
+Reverse Direction: downmask 
+Visited node in original direction: 1733
+Visited node in reverse direction: 3582
+Choose the original direction:
+Find the solution in depth: 36 (depth threshold: 40)
+  3  4  4  3  3  2  3  4  4  4  2  3  3  3  4  3  4  4  2  2
+  3  2  3  2  3  4  4  4  2  4  2  3  1  4  2  1
+Find the solution in depth: 36 (depth threshold: 36)
+  3  4  4  3  3  3  4  4  2  3  4  4  3  3  4  2  3  3  3  4
+  4  2  3  4  2  2  2  1  4  4  2  4  3  1  2  2
+Find the solution in depth: 24 (depth threshold: 36)
+  3  4  4  3  3  3  4  4  3  4  4  2  3  3  2  1  4  4  2  4
+  3  1  2  2
+Time spent: 0.000000 seconds.
+
+
+visited node: 1805, last iteration: 1733
+cutoff node : 53, last iteration: 50
+time: 0.000000, last iteration: 0.000381
+Search speed: infM/s, laster iteration: 4.549M/s
+
+Instance 2:
+4 4 4 1 0.000000
+1000  0     0001  10    
+1     010   0     0     
+
+Solvable!
+
+ 1 1 1 0
+ 0 1 0 1
+Gcd: 1
+Visited node in original direction: 1326793
+Visited node in reverse direction: 8
+Choose the reverse direction:
+Find the solution in depth: 4 (depth threshold: 20)
+  2  3  4  2
+  --
+  not
+  0   0001  10  0 
+  010 0     0   010
+  
+  i.e.
+  00001100 
+  01000010
+
+  BUT
+
+  2 4 3 2 i.e.
+
+  0    10  0001   0
+  010  0   0      010
+
+  i.e.
+
+  01000010
+  01000010  
+  
+  --
+  
+Time spent: 0.000000 seconds.
+
+
+visited node: 8, last iteration: 8
+cutoff node : 0, last iteration: 0
+time: 0.000000, last iteration: 0.000009
+Search speed: infM/s, laster iteration: 0.889M/s
+
+Instance 3:
+4 4 7 1 0.000000
+1010  11    01    01    
+10    101   1101  0101  
+
+Solvable!
+
+ 1 0 0 1
+ 1 0 1 1
+Gcd: 1
+Visited node in original direction: 22
+Visited node in reverse direction: 25
+Choose the original direction:
+Find the solution in depth: 7 (depth threshold: 20)
+  1  1  1  2  4  2  3
+Time spent: 0.000000 seconds.
+
+
+visited node: 22, last iteration: 22
+cutoff node : 0, last iteration: 0
+time: 0.000000, last iteration: 0.000015
+Search speed: infM/s, laster iteration: 1.467M/s
+
+Instance 4:
+4 4 10 1 0.000000
+1101  1     100   0     
+01    10    1010  1     
+
+Solvable!
+
+ 0 1 0 0
+ 1 0 0 0
+Gcd: 1
+Original Direction: upmask 
+Reverse Direction: downmask 
+Visited node in original direction: 10
+Visited node in reverse direction: 13
+Choose the original direction:
+Find the solution in depth: 10 (depth threshold: 20)
+  2  4  2  2  4  2  4  1  4  1
+Time spent: 0.000000 seconds.
+
+
+visited node: 10, last iteration: 10
+cutoff node : 0, last iteration: 0
+time: 0.000000, last iteration: 0.000011
+Search speed: infM/s, laster iteration: 0.909M/s
+
+Instance 5:
+4 4 5 1 0.000000
+1110  101   1     1     
+1     11    011   0101  
+
+Solvable!
+
+ 1 0 0 0
+ 0 0 1 1
+Gcd: 1
+Original Direction: downmask 
+Reverse Direction: upmask 
+Visited node in original direction: 7
+Visited node in reverse direction: 12
+Choose the original direction:
+Find the solution in depth: 5 (depth threshold: 20)
+  1  2  4  2  3
+Time spent: 0.000000 seconds.
+
+
+visited node: 7, last iteration: 7
+cutoff node : 0, last iteration: 0
+time: 0.000000, last iteration: 0.000008
+Search speed: infM/s, laster iteration: 0.875M/s
+
+Instance 6:
+4 4 5 1 0.000000
+1011  1     1     00    
+11    0101  10    0101  
+
+Solvable!
+
+ 0 0 1 0
+ 1 0 0 0
+Gcd: 1
+Original Direction: upmask 
+Reverse Direction: downmask 
+Visited node in original direction: 7
+Visited node in reverse direction: 4
+Choose the reverse direction:
+Find the solution in depth: 5 (depth threshold: 20)
+  1  3  1  4  3
+  --
+1   00   1011  1   1011
+10  0101 11    10  11
+
+i.e. reverse dir
+
+100101111011
+100101111011
+
+  --
+  
+Time spent: 0.000000 seconds.
+
+
+visited node: 4, last iteration: 4
+cutoff node : 0, last iteration: 0
+time: 0.000000, last iteration: 0.000008
+Search speed: infM/s, laster iteration: 0.500M/s
+
+Instance 7:
+4 4 10 1 0.000000
+1101  1     1     0     
+1     110   0010  101   
+
+Solvable!
+
+ 0 1 0 0
+ 1 0 0 0
+Gcd: 1
+Original Direction: upmask 
+Reverse Direction: downmask 
+Visited node in original direction: 42
+Visited node in reverse direction: 16
+Choose the reverse direction:
+Find the solution in depth: 10 (depth threshold: 20)
+  1  2  1  1  2  4  1  4  2  2
+Time spent: 0.000000 seconds.
+
+
+visited node: 16, last iteration: 16
+cutoff node : 0, last iteration: 0
+time: 0.000000, last iteration: 0.000012
+Search speed: infM/s, laster iteration: 1.333M/s
+
+Instance 8:
+4 4 4 1 0.000000
+1001  10    0     10    
+0100  1     101   1010  
+
+Solvable!
+
+ 0 1 0 0
+ 0 0 0 1
+Gcd: 1
+Original Direction: downmask 
+Reverse Direction: upmask 
+Visited node in original direction: 5
+Visited node in reverse direction: 5
+Choose the original direction:
+Find the solution in depth: 4 (depth threshold: 20)
+  2  1  2  4
+Time spent: 0.000000 seconds.
+
+
+visited node: 5, last iteration: 5
+cutoff node : 0, last iteration: 0
+time: 0.000000, last iteration: 0.000007
+Search speed: infM/s, laster iteration: 0.714M/s
+
+Instance 9:
+4 4 4 2 0.000000
+1100  0     1101  110   
+0     0011  1     0     
+
+Solvable!
+
+ 0 1 1 0
+ 1 0 1 1
+Gcd: 1
+Visited node in original direction: 8
+Visited node in reverse direction: 16
+Choose the original direction:
+Find the solution in depth: 4 (depth threshold: 20)
+  2  2  1  1
+Find the solution in depth: 4 (depth threshold: 4)
+  2  2  1  3
+Time spent: 0.000000 seconds.
+
+
+visited node: 8, last iteration: 8
+cutoff node : 0, last iteration: 0
+time: 0.000000, last iteration: 0.000010
+Search speed: infM/s, laster iteration: 0.800M/s
+
+Instance 10:
+4 4 5 1 0.000000
+1001  0110  0101  01    
+111   0     1     0101  
+
+Solvable!
+
+ 0 1 0 1
+ 0 1 1 1
+Gcd: 1
+Visited node in original direction: 407
+Visited node in reverse direction: 18
+Choose the reverse direction:
+Find the solution in depth: 5 (depth threshold: 20)
+  2  3  4  4  4
+Time spent: 0.000000 seconds.
+
+
+visited node: 19, last iteration: 19
+cutoff node : 0, last iteration: 0
+time: 0.000000, last iteration: 0.000011
+Search speed: infM/s, laster iteration: 1.727M/s
+
+Instance 11:
+4 4 4 1 0.000000
+1001  101   01    0101  
+001   0     0101  1     
+
+Solvable!
+
+ 0 0 1 0
+ 1 0 1 1
+Gcd: 1
+Visited node in original direction: 4
+Visited node in reverse direction: 13
+Choose the original direction:
+Find the solution in depth: 4 (depth threshold: 20)
+  3  3  4  1
+Time spent: 0.000000 seconds.
+
+
+visited node: 4, last iteration: 4
+cutoff node : 0, last iteration: 0
+time: 0.000000, last iteration: 0.000008
+Search speed: infM/s, laster iteration: 0.500M/s
+
+Instance 12:
+4 4 10 1 0.000000
+1101  0     1     0000  
+01    1     10    1010  
+
+Solvable!
+
+ 0 0 1 0
+ 1 0 0 0
+Gcd: 1
+Original Direction: upmask 
+Reverse Direction: downmask 
+Visited node in original direction: 10
+Visited node in reverse direction: 13
+Choose the original direction:
+Find the solution in depth: 10 (depth threshold: 20)
+  3  2  3  3  2  3  2  1  2  1
+Time spent: 0.000000 seconds.
+
+
+visited node: 10, last iteration: 10
+cutoff node : 0, last iteration: 0
+time: 0.000000, last iteration: 0.000012
+Search speed: infM/s, laster iteration: 0.833M/s
+
+Instance 13:
+4 4 5 1 0.000000
+1011  110   0     10    
+1     011   01    00    
+
+Solvable!
+
+ 0 0 1 0
+ 1 0 0 0
+Gcd: 1
+Original Direction: upmask 
+Reverse Direction: downmask 
+Visited node in original direction: 4
+Visited node in reverse direction: 6
+Choose the original direction:
+Find the solution in depth: 5 (depth threshold: 20)
+  3  4  3  3  1
+Time spent: 0.000000 seconds.
+
+
+visited node: 4, last iteration: 4
+cutoff node : 0, last iteration: 0
+time: 0.000000, last iteration: 0.000008
+Search speed: infM/s, laster iteration: 0.500M/s
+
+Instance 14:
+4 4 4 1 0.000000
+1110  01    1     01    
+1     11    101   1     
+
+Solvable!
+
+ 1 0 1 0
+ 0 0 1 1
+Gcd: 1
+Visited node in original direction: 2572
+Visited node in reverse direction: 6
+Choose the reverse direction:
+Find the solution in depth: 4 (depth threshold: 20)
+  3  1  4  3
+Time spent: 0.000000 seconds.
+
+
+visited node: 7, last iteration: 7
+cutoff node : 0, last iteration: 0
+time: 0.000000, last iteration: 0.000008
+Search speed: infM/s, laster iteration: 0.875M/s
+
+Instance 15:
+4 4 4 1 0.000000
+1000  0101  01    111   
+000   1     0101  01    
+
+Solvable!
+
+ 0 0 1 0
+ 1 1 0 0
+Gcd: 1
+Original Direction: upmask 
+Reverse Direction: downmask 
+Visited node in original direction: 4
+Visited node in reverse direction: 6
+Choose the original direction:
+Find the solution in depth: 4 (depth threshold: 20)
+  3  3  2  1
+Time spent: 0.000000 seconds.
+
+
+visited node: 4, last iteration: 4
+cutoff node : 0, last iteration: 0
+time: 0.000000, last iteration: 0.000008
+Search speed: infM/s, laster iteration: 0.500M/s
+
+Instance 16:
+4 4 17 1 0.000000
+1100  1     111   1001  
+11    1001  0     1     
+
+Solvable!
+
+ 1 0 0 1
+ 0 1 0 0
+Gcd: 1
+Original Direction: downmask 
+Reverse Direction: upmask 
+Visited node in original direction: 188431
+Visited node in reverse direction: 35
+Choose the reverse direction:
+Find the solution in depth: 17 (depth threshold: 20)
+  2  1  2  2  1  1  2  2  2  2  1  1  1  1  3  3  4
+Time spent: 0.000000 seconds.
+
+
+visited node: 64, last iteration: 64
+cutoff node : 3, last iteration: 3
+time: 0.000000, last iteration: 0.000027
+Search speed: infM/s, laster iteration: 2.370M/s
+
+Instance 17:
+4 4 10 1 0.000000
+1011  1     0     0     
+1     0     1     0111  
+
+Solvable!
+
+ 0 0 0 1
+ 1 0 0 0
+Gcd: 3
+Original Direction: upmask 
+Reverse Direction: downmask 
+Visited node in original direction: 35
+Visited node in reverse direction: 58
+Choose the original direction:
+Find the solution in depth: 10 (depth threshold: 20)
+  4  2  2  2  3  3  4  2  1  1
+Time spent: 0.000000 seconds.
+
+
+visited node: 35, last iteration: 35
+cutoff node : 2, last iteration: 2
+time: 0.000000, last iteration: 0.000015
+Search speed: infM/s, laster iteration: 2.333M/s
+
+Instance 18:
+4 4 4 1 0.000000
+1000  000   0     100   
+10    11    001   0     
+
+Solvable!
+
+ 0 0 1 0
+ 0 0 0 1
+Gcd: 1
+Original Direction: upmask 
+Reverse Direction: downmask 
+Visited node in original direction: 3
+Visited node in reverse direction: 5
+Choose the original direction:
+Find the solution in depth: 4 (depth threshold: 20)
+  3  3  4  4
+Time spent: 0.000000 seconds.
+
+
+visited node: 3, last iteration: 3
+cutoff node : 0, last iteration: 0
+time: 0.000000, last iteration: 0.000007
+Search speed: infM/s, laster iteration: 0.429M/s
+
+Instance 19:
+4 4 4 1 0.000000
+1101  0     1     011   
+110   001   0     11    
+
+Solvable!
+
+ 0 1 0 0
+ 0 0 0 1
+Gcd: 1
+Original Direction: upmask 
+Reverse Direction: downmask 
+Visited node in original direction: 5
+Visited node in reverse direction: 4
+Choose the reverse direction:
+Find the solution in depth: 4 (depth threshold: 20)
+  4  3  4  2
+Time spent: 0.000000 seconds.
+
+
+visited node: 4, last iteration: 4
+cutoff node : 0, last iteration: 0
+time: 0.000000, last iteration: 0.000008
+Search speed: infM/s, laster iteration: 0.500M/s
+
+Instance 20:
+4 4 7 1 0.000000
+1000  1     01    0     
+1     0010  00    10    
+
+Solvable!
+
+ 1 0 0 0
+ 0 0 0 1
+Gcd: 1
+Original Direction: downmask 
+Reverse Direction: upmask 
+Visited node in original direction: 9
+Visited node in reverse direction: 18
+Choose the original direction:
+Find the solution in depth: 7 (depth threshold: 20)
+  1  3  3  4  4  3  4
+Time spent: 0.000000 seconds.
+
+
+visited node: 9, last iteration: 9
+cutoff node : 0, last iteration: 0
+time: 0.000000, last iteration: 0.000010
+Search speed: infM/s, laster iteration: 0.900M/s
+
+Instance 21:
+4 4 4 1 0.000000
+1110  0     0001  0000  
+110   001   0     10    
+
+Solvable!
+
+ 0 0 1 0
+ 1 0 0 0
+Gcd: 1
+Visited node in original direction: 5
+Visited node in reverse direction: 3
+Choose the reverse direction:
+Find the solution in depth: 4 (depth threshold: 20)
+  1  2  2  3
+Time spent: 0.000000 seconds.
+
+
+visited node: 3, last iteration: 3
+cutoff node : 0, last iteration: 0
+time: 0.000000, last iteration: 0.000006
+Search speed: infM/s, laster iteration: 0.500M/s
+
+Instance 22:
+4 4 4 2 0.000000
+1110  001   0101  1     
+11    0100  01    1101  
+
+Solvable!
+
+ 1 0 1 1
+ 0 0 1 1
+Gcd: 1
+Visited node in original direction: 9
+Visited node in reverse direction: 10
+Choose the original direction:
+Find the solution in depth: 4 (depth threshold: 20)
+  3  2  4  3
+Find the solution in depth: 4 (depth threshold: 4)
+  3  2  1  4
+Time spent: 0.000000 seconds.
+
+
+visited node: 9, last iteration: 9
+cutoff node : 0, last iteration: 0
+time: 0.000000, last iteration: 0.000010
+Search speed: infM/s, laster iteration: 0.900M/s
+
+Instance 23:
+4 4 4 1 0.000000
+1001  1110  00    1     
+00    1     110   1011  
+
+Solvable!
+
+ 0 1 0 1
+ 0 0 0 1
+Gcd: 1
+Visited node in original direction: 49
+Visited node in reverse direction: 3
+Choose the reverse direction:
+Find the solution in depth: 4 (depth threshold: 20)
+  4  4  2  2
+Time spent: 0.000000 seconds.
+
+
+visited node: 3, last iteration: 3
+cutoff node : 0, last iteration: 0
+time: 0.000000, last iteration: 0.000008
+Search speed: infM/s, laster iteration: 0.375M/s
+
+Instance 24:
+4 4 6 1 0.000000
+1010  0     1     10    
+10    1010  0     01    
+
+Solvable!
+
+ 1 0 0 0
+ 1 1 0 0
+Gcd: 1
+Visited node in original direction: 12
+Visited node in reverse direction: 31
+Choose the original direction:
+Find the solution in depth: 6 (depth threshold: 20)
+  1  1  2  3  2  1
+Time spent: 0.000000 seconds.
+
+
+visited node: 12, last iteration: 12
+cutoff node : 1, last iteration: 1
+time: 0.000000, last iteration: 0.000010
+Search speed: infM/s, laster iteration: 1.200M/s
+
+Instance 25:
+4 4 4 1 0.000000
+1000  01    11    0     
+0     1     1001  0010  
+
+Solvable!
+
+ 0 0 0 1
+ 1 1 0 1
+Gcd: 1
+Visited node in original direction: 197
+Visited node in reverse direction: 10
+Choose the reverse direction:
+Find the solution in depth: 4 (depth threshold: 20)
+  1  1  4  4
+Time spent: 0.000000 seconds.
+
+
+visited node: 11, last iteration: 11
+cutoff node : 0, last iteration: 0
+time: 0.000000, last iteration: 0.000009
+Search speed: infM/s, laster iteration: 1.222M/s
+
+Instance 26:
+4 4 31 1 0.000000
+1110  1     11    0     
+10    1000  0     1     
+
+Solvable!
+
+ 0 1 0 0
+ 1 0 0 0
+Gcd: 1
+Original Direction: upmask 
+Reverse Direction: downmask 
+Visited node in original direction: 2415
+Visited node in reverse direction: 536
+Choose the reverse direction:
+Find the solution in depth: 31 (depth threshold: 40)
+  1  4  4  3  1  4  1  4  4  3  3  4  4  4  3  3  4  4  4  4
+  2  4  4  4  3  2  2  4  4  4  2
+Time spent: 0.000000 seconds.
+
+
+visited node: 1842, last iteration: 1755
+cutoff node : 10, last iteration: 9
+time: 0.000000, last iteration: 0.000349
+Search speed: infM/s, laster iteration: 5.029M/s
+
+Instance 27:
+4 4 4 1 0.000000
+1001  0     000   1     
+0     01    010   01    
+
+Solvable!
+
+ 0 1 0 0
+ 0 0 0 1
+Gcd: 1
+Visited node in original direction: 9
+Visited node in reverse direction: 4
+Choose the reverse direction:
+Find the solution in depth: 4 (depth threshold: 20)
+  4  2  1  2
+Time spent: 0.000000 seconds.
+
+
+visited node: 4, last iteration: 4
+cutoff node : 0, last iteration: 0
+time: 0.000000, last iteration: 0.000006
+Search speed: infM/s, laster iteration: 0.667M/s
+

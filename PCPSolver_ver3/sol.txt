@@ -1,0 +1,34 @@
+Instance 1:
+3 3 75 2 0.040000
+110  1    0    
+1    0    110  
+
+Solvable!
+
+ 1 0 0
+ 0 0 1
+Gcd: 2
+Original Direction: downmask 
+Reverse Direction: upmask 
+Visited node in original direction: 1881
+Visited node in reverse direction: 1289
+Choose the reverse direction:
+Find the solution in depth: 75 (depth threshold: 80)
+  3  2  2  3  3  1  3  2  2  2  1  3  3  3  2  1  3  2  2  1
+  3  2  1  3  3  2  1  3  2  3  2  2  1  3  2  1  3  3  2  2
+  3  3  2  1  3  2  1  1  3  3  1  1  3  2  1  1  1  1  2  2
+  1  1  2  2  3  1  3  3  1  2  1  1  2  1  1
+Find the solution in depth: 75 (depth threshold: 75)
+  3  2  2  3  3  1  3  2  2  2  1  3  3  3  2  3  2  2  1  1
+  3  1  3  1  1  2  3  2  2  2  2  3  1  3  3  3  3  1  2  1
+  3  2  2  1  1  2  3  2  1  3  1  3  3  2  2  3  2  1  2  1
+  1  3  3  1  3  2  1  1  1  2  1  1  2  1  1
+Time spent: 0.040000 seconds.
+
+
+visited node: 622682, last iteration: 583814
+cutoff node : 4291, last iteration: 3624
+time: 0.040000, last iteration: 0.030000
+Search speed: 15.567M/s, laster iteration: 19.460M/s
+
+Total nodes searched: 639712

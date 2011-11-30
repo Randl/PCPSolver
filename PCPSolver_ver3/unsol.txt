@@ -1,0 +1,23 @@
+Instance 1:
+3 4 75 2 0.040000
+1101  0110  1     
+1     11    110   
+
+Solved!
+
+ 0 0 1
+ 1 0 0
+Gcd: 1
+Original Direction: upmask 
+Reverse Direction: downmask 
+Visited node in original direction: 74
+Visited node in reverse direction: 267
+Choose the original direction:
+Time spent: 0.010000 seconds.
+
+
+visited node: 17030, last iteration: 2503
+cutoff node : 131, last iteration: 16
+time: 0.010000, last iteration: 0.000000
+Search speed: 1.703M/s, laster iteration: infM/s
+
