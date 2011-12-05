@@ -18,11 +18,14 @@ namespace WindowsGame1
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        DominoScene dominoScene;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
+            this.IsMouseVisible = true;
             Content.RootDirectory = "Content";
+            dominoScene = new DominoScene();
 
             Console.WriteLine("PCPSolver");
         }
@@ -37,6 +40,7 @@ namespace WindowsGame1
         {
             // TODO: Add your initialization logic here
 
+
             base.Initialize();
         }
 
@@ -48,6 +52,7 @@ namespace WindowsGame1
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            dominoScene.LoadContent(Content);
 
             // TODO: use this.Content to load your game content here
         }
@@ -72,6 +77,8 @@ namespace WindowsGame1
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
+            dominoScene.Update(gameTime);
+
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -86,6 +93,7 @@ namespace WindowsGame1
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+            dominoScene.Draw(spriteBatch);
 
             base.Draw(gameTime);
         }
