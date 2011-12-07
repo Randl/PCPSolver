@@ -27,7 +27,35 @@ namespace WindowsGame1
             Content.RootDirectory = "Content";
             //dominoScene = new DominoScene();
 
-            Console.WriteLine("PCPSolver");
+            Console.WriteLine("PCPSolver:\n Team Members:\n Chris Dillard\n John Futch");
+
+
+            // SIMPLE SOLVABLE INSTANCE
+            // 
+            //3 2
+            //0 01 110
+            //100 00 11
+            //
+            //
+
+            PCPInstance instance = new PCPInstance();
+
+            Pair p = new Pair();
+            p.up= "0";
+            p.down = "100";
+
+            Pair p2 = new Pair();
+            p2.up= "01";
+            p2.down = "00";
+
+            Pair p3 = new Pair();
+            p3.up = "110";
+            p3.down = "11";
+
+            instance.arrPair = new Pair[3] { p, p2, p3 };
+
+
+            PCPSolver.SolvePCPInstance(instance, 1);
         }
 
         /// <summary>
