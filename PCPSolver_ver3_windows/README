@@ -1,0 +1,92 @@
+==============================================
+ PCPSolver Version 0.0.3 README
+==============================================
+
+PCPSolver is a program to solve instances of the Post's Correspondence
+Problem (PCP). It can also randomly search for hard instances with small 
+sizes and widths, and systematically scan PCP subclasses. Use option '-h'
+to get online help.
+
+0. About the new version
+   Ver 0.0.3.1: (Oct 31, 2006)
+    - Fixed a few bugs that prevent the first optimal solution from being
+      output.
+      
+   Ver 0.0.3: (Nov 16, 2003)    
+    - During experiments with different depth increment in IDA*, more 
+      functionalities were fully tested, resulting in several minor bugs 
+      removed.
+
+   Ver 0.0.2: (April 25, 2003)
+    - The speed of the solver has been improved by roughly 20% in several
+      different hardware/software platforms.
+    - Source code was almost completely refined to improve readability,
+      modularity and usability (including a textual interface).	
+
+   Ver 0.0.1: (March 7, 2003)
+    - Finally, the source code was released :)
+
+1. Format of PCP instance
+
+   a. An instance starts at a line whose first letter is a digit 
+      ('0'-'9'). All other lines are considered as comments
+
+   b. The first line of an instance contains the size and width of 
+      the instance. The data for size must start from the first 
+      letter in the line. Depending on the readmode, the first 
+      line can include more information, e.g., the optimal 
+      solution length and solution number. See the definition
+      of READWRITEMODE in "readwrite.h". By default, the output instance
+      will have its size, width, optimal solution length, # of optimal
+      solutions and the solving time in the first line.
+     
+  
+   c. The next two lines contain the instance's pairs. Only 0, 1, space,
+      tab, and line break are allowed in the lines.
+   
+   d. Input of instances ends when the file ends or read a line starting
+      with digit '0'.
+
+
+2. Test suite (in subdirectory TestSuit)
+
+   a. 200HardInstances.txt - 200 hard instances.
+
+   b. PCP[3,4]Unsolved.txt - 3,170 unsolved instances in PCP[3,4]
+
+   c. PCP[3,4]Unsolved.txt - 13,923 unsolved instances in PCP[4,3]  
+
+   *note: You can generate all instances in PCP[3,3] to test the program
+          to prove instances unsolvable.
+
+
+3. Portability
+ 
+   The program has been tested on Visual C++ 6.0 on Windows 2000 with
+   Pentium Processor 600Mhz, gcc 2.96 on Linux with Pentium Processor 
+   600Mhz, and SGI CC on SGI machines.  This program is expected to 
+   run correctly on all platforms with a standard C++ compiler.
+
+
+4. Update & Bug report ...
+
+   The latest version of PCPSolver will be put at
+   http://www.cs.ualberta.ca/~zhao/PCP/PCPSolver/. Welcome to visit my 
+   webpage for PCP: http://www.cs.ualberta.ca/~zhao/PCP/.
+
+   If you find bugs in the program, or have a better idea to improve the 
+   program, please feel free to contact me at zhao at cs.ualberta.ca.
+
+   If you would like to thank the author for writing this program 
+   painfully, you can send me a post card to express your gratitude. 
+   My mail address is:
+
+       Ling Zhao
+       Department of Computing Science
+       University of Alberta
+       Edmonton, Alberta, T6G 2E8.
+
+   Enjoy the PCP world. :)
+
+                                          Ling Zhao (zhao at cs.ualberta.ca)
+                                          Nov 16, 2003
