@@ -16,8 +16,8 @@
 class CPair
 {
 public:
-	char up[MAXWIDTH+1]; // the last char is always SENTINEL
-	char down[MAXWIDTH+1];
+	char up[16+1]; // the last char is always SENTINEL
+	char down[16+1];
 	int uplen;
 	int downlen;
     int diff0, diff1;

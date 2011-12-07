@@ -107,9 +107,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domino.cs" />
-    <Compile Include="DominoScene.cs" />
-    <Compile Include="DominoStack.cs" />
+    <Compile Include="Exclusion.cs" />
+    <Compile Include="Pair.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="Filter.cs" />
+    <Compile Include="Mask.cs" />
+    <Compile Include="PCPInstance.cs" />
+    <Compile Include="PCPSolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
