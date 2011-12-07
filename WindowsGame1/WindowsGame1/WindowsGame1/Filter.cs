@@ -190,20 +190,20 @@ namespace WindowsGame1
 
 	        if (!(Pass_Postfix_Filter(instance) == 0))
 	        {
-		        Console.WriteLine("Cannot pass the postfix filter!\n";
+		        Console.WriteLine("Cannot pass the postfix filter!\n");
 		        return 0;
 	        }
 
 	        if (!(Pass_Length_Balance_Filter(instance) == 0))
 	        {
-		        Console.WriteLine("Cannot pass the length balance filter!\n";
+		        Console.WriteLine("Cannot pass the length balance filter!\n");
 		        return 0;
 	        }
 
 	        if (!(Pass_Element_Balance_Filter(instance) == 0))
 	        {
-		        Console.WriteLine("Cannot pass the element balance filter!\n";
-		        Console.WriteLine("Some pair can not be used!\n";
+		        Console.WriteLine("Cannot pass the element balance filter!\n");
+		        Console.WriteLine("Some pair can not be used!\n");
 
 		        if (instance.size<=2)
                     return 0;

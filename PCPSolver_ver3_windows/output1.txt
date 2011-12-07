@@ -1,5 +1,5 @@
 Instance 1:
-3 2 4 1 0.016000
+3 2 4 1 0.000000
 0   01  110 
 100 00  11  
 
@@ -15,12 +15,12 @@ Visited node in reverse direction: 4
 Choose the original direction:
 Find the solution in depth: 4 (depth threshold: 4)
   3  2  3  1
-Time spent: 0.016000 seconds.
+Time spent: 0.000000 seconds.
 
 
 visited node: 8, last iteration: 4
 cutoff node : 0, last iteration: 0
-time: 0.016000, last iteration: 0.000000
-Search speed: 0.001M/s, laster iteration: infM/s
+time: 0.000000, last iteration: 0.000000
+Search speed: infM/s, laster iteration: infM/s
 
 Total nodes searched: 8

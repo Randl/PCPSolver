@@ -80,6 +80,20 @@ namespace WindowsGame1
 
             int tmp;
             int[] arrOffset= new int[17];
+
+            size = 0;
+            for (i = 0; i < arrPair.Length; i++)
+            {
+                if (arrPair[i] != null)
+                {
+                    size++;
+                    arrPair[i].uplen = arrPair[i].up.Length;
+                    arrPair[i].downlen = arrPair[i].down.Length;
+                    arrPair[i].ID = i;
+                }
+
+            }
+            
             for (i=0;i<size;i++)
             {
                 tmp = arrPair[i].uplen - arrPair[i].downlen;
@@ -149,8 +163,19 @@ namespace WindowsGame1
                 i++;
             }
             reversedPCP.CountOffset();
-            //return newly created
-            //throw new NullReferenceException();
+        }
+
+        public void Print()
+        {
+            String up ="";
+            String down = "";
+            foreach (Pair p in arrPair)
+            {
+                up+=" "+p.up;
+                down += " " + p.down;  
+            }
+            Console.WriteLine(up);
+            Console.WriteLine(down);
         }
 
         public static string Reverse(string s)

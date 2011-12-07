@@ -59,20 +59,18 @@ namespace WindowsGame1
                             continue;
 
 				        
-                        //TODO: PORT THIS LINE
-                        // the string must be matched
-				        //if (memcmp(shortstr, longstr+m, t)) continue;
+                        
 				        if (shortstr == longstr.Substring(m,longstr.Length-m)) continue;
 				        // the tail string in the bottom should possibly lead to the solution
 				        if (j<n-1)
 				        {
 					        maxlen = n-j-1+10*instance.offset;
-					        //Config config = new Config(maxlen);
-					        //config.ConfigAssign(longstr+j+1, n-j-1, !up);
-					        //config.depth = 1;
+					        Config config = new Config(maxlen);
+					        config.ConfigAssign(longstr.Substring(j+1), n-j-1, Convert.ToInt32(!Convert.ToBoolean(up)));
+					        config.depth = 1;
 					        
-                            //TODO: DECLARE STATIC FUNCT IN SOLVER
-                            ret = PCPSolver.BeginSolveConfig(instance, maxlen, 100);
+                           
+                            ret = PCPSolver.BeginSolveConfig(instance, config, maxlen, 100);
 					        
                             if (ret == -1) continue;
 				        }
@@ -85,16 +83,18 @@ namespace WindowsGame1
 				        int index;
 				        
                         
-                        //char str = new char[m];
+                        char[] str = new char[m];
 
-                        //for (index=0;index<m;index++)
-                        //    str[index] = longstr[m-index-1];
+                        for (index=0;index<m;index++)
+                            str[index] = longstr[m-index-1];
 
-                        //config2.ConfigAssign(str, m, !up);
+                        String st = new String(str);
+
+                        config2.ConfigAssign(st, m, Convert.ToInt32(!Convert.ToBoolean(up)));
 				        
-                        //config2.depth = 1;
+                        config2.depth = 1;
 
-				        ret = PCPSolver.BeginSolveConfig(reverseInstance, maxlen, 100);
+				        ret = PCPSolver.BeginSolveConfig(reverseInstance,config2, maxlen, 100);
 				        
                         if (ret == -1) continue;
 				        else // no mask!

@@ -33,18 +33,19 @@ void CSolver::PrintSolution(int *arr, int len) // print the solution to both the
 {
 	char bufferline[100];
     int i;
-
+	
 	sprintf(bufferline, "Find the solution in depth: %d (depth threshold: %d)\n", len, 
 						 iterative_depth_threshold);
     strcat(buffer, bufferline);
-
+	printf( "Money::\n");
 	for (i=1;i<=len;i++)
 	{
+		printf( "%3d", arr[i]);
 		sprintf(bufferline, "%3d", arr[i]);
         strcat(buffer, bufferline);
 		if (i % 20 == 0)  strcat(buffer, "\n");
 	}
-
+	printf( "\n::Money\n");
 	strcat(buffer, "\n");
 }
 
@@ -114,7 +115,8 @@ int CSolver::Solution_Found(CPCPInstance *pPCP, CConfig *pConfig)
 
 			// add the pair
 			tempConfig.MatchPair(&pPCP->arrPair[arrSelection[k]-1], arrSelection); 
-
+			
+			tempConfig.ConfigPrintToConsole();
             //tempConfig.ConfigPrint(errfile);
 			// make up the visited node count
 			node_num--;

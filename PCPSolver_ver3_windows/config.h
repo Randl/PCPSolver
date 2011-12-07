@@ -55,9 +55,13 @@ public:
 	inline unsigned long CalHashValue();
 	int ConfigCmp(CConfig *pConfig);
 
+	
+	// for debugging
+	void ConfigPrintToConsole();
 	// for debugging
 	void ConfigPrint(FILE *output=stdout);
-
+	
+	
 	//int TestMatchingPairs(const CPCPInstance *pcp, const int *arr, const int num);
 	int TestMatchingPairs(CPCPInstance *pcp, CPair *pPair1, CPair *pPair2);
 };

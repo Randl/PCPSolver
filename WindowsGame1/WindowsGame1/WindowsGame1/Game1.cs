@@ -39,7 +39,7 @@ namespace WindowsGame1
             //
 
             PCPInstance instance = new PCPInstance();
-
+            /*
             Pair p = new Pair();
             p.up= "0";
             p.down = "100";
@@ -53,9 +53,30 @@ namespace WindowsGame1
             p3.down = "11";
 
             instance.arrPair = new Pair[3] { p, p2, p3 };
+            */
 
+
+            Pair p = new Pair();
+            p.up = "100";
+            p.down = "1";
+
+            Pair p2 = new Pair();
+            p2.up = "0";
+            p2.down = "100";
+
+            Pair p3 = new Pair();
+            p3.up = "1";
+            p3.down = "00";
+
+            instance.arrPair = new Pair[3] { p, p2, p3 };
+
+            instance.Print();
 
             PCPSolver.SolvePCPInstance(instance, 1);
+
+
+
+
         }
 
         /// <summary>

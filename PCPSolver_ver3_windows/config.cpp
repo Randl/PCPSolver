@@ -1,12 +1,12 @@
-//////////////////////////////////////////////////////////////////////////////// 
+////////////////////////////////////////////////////////////////////////////////
 // config.cpp                                                            //
-// Description:                                                               //  
+// Description:                                                               //
 //   Implementation of config matching routines:                              //
 //   one for testing matching, one for the real matching                      //
-// Created time:   May 12, 2001                                               //  
-// Modified time:  Feb  2, 2003                                               //  
-// Author: Ling Zhao (zhao@cs.ualberta.ca)                                    // 
-////////////////////////////////////////////////////////////////////////////////     
+// Created time:   May 12, 2001                                               //
+// Modified time:  Feb  2, 2003                                               //
+// Author: Ling Zhao (zhao@cs.ualberta.ca)                                    //
+////////////////////////////////////////////////////////////////////////////////
 
 #include "config.h"
 #include "PCPInstance.h"
@@ -16,7 +16,7 @@ void PrintArray(char *arr, int n)
 {
     int i;
 
-    for (i=0;i<n;i++)     
+    for (i=0;i<n;i++)
     {
         printf("%1d", arr[i]);
         if ((i+1)%10==0) printf("\n");
@@ -74,6 +74,13 @@ void CConfig::ConfigAssign(char *arr, int len, int up)
         if (arr[i]==0) num0++;
 
     if (!up) num0=-num0;
+
+
+	printf("ASSSIGNED A NEW CONFIG FOLLOWING:\n");
+	this->ConfigPrintToConsole();
+	printf("WITH ARRAY:\n");
+	PrintArray(arr,len);
+
 }
 
 // compare itself with pConfig
@@ -86,7 +93,42 @@ int CConfig::ConfigCmp(CConfig *pConfig)
 
     return memcmp(arr, pConfig->arr, round*STRINGTYPEBYTESIZE);
 }
+// print the config for debugging
+void CConfig::ConfigPrintToConsole()
+{
+	int i, j;
+	STRINGTYPE temp;
+	int count = len / STRINGTYPEBITSIZE;
+	int pos = len % STRINGTYPEBITSIZE;
+	int counter = 0;
 
+	printf( "%d -- %d -- %d\n", node_num, depth, len);
+	for (i=0;i<count;i++)
+	{
+		temp = arr[i];
+		for(j=0;j<STRINGTYPEBITSIZE;j++)
+		{
+			printf( "%d", (temp>>j)&1);
+			counter++;
+				if (counter%5==0) printf(" ");
+		}
+	}
+
+	if (pos!=0)
+	{
+		temp = arr[count];
+	    for (j=0;j<pos;j++)
+		{
+		    printf("%d", (temp>>j)&1);
+		    counter++;
+				if (counter%5==0) printf(" ");
+		}
+	}
+
+	printf("\n");
+	 printf("%d\n", num0);
+	//fflush(output);
+}
 
 // print the config for debugging
 void CConfig::ConfigPrint(FILE *output)
@@ -97,7 +139,7 @@ void CConfig::ConfigPrint(FILE *output)
 	int pos = len % STRINGTYPEBITSIZE;
 	int counter = 0;
 
-	//	fprintf(output, "%d -- %d -- %d\n", node_num, depth, len);
+	fprintf(output, "%d -- %d -- %d\n", node_num, depth, len);
 	for (i=0;i<count;i++)
 	{
 		temp = arr[i];
@@ -105,7 +147,7 @@ void CConfig::ConfigPrint(FILE *output)
 		{
 			fprintf(output, "%d", (temp>>j)&1);
 			counter++;
-			//	if (counter%5==0) fprintf(output, " ");
+				if (counter%5==0) fprintf(output, " ");
 		}
 	}
 
@@ -116,12 +158,12 @@ void CConfig::ConfigPrint(FILE *output)
 		{
 		    fprintf(output, "%d", (temp>>j)&1);
 		    counter++;
-			//	if (counter%5==0) fprintf(output, " ");
+				if (counter%5==0) fprintf(output, " ");
 		}
 	}
 
 	fprintf(output, "\n");
-	// fprintf(output, "%d\n", num0);
+	 fprintf(output, "%d\n", num0);
 	fflush(output);
 }
 
@@ -157,8 +199,8 @@ int CConfig::MatchPair(CPair *pPair, int *arrSelection)
 {
 	int len;
     int num0=this->num0;
-	
-	// update the string in config 
+
+	// update the string in config
 	if (this->up) // up is longer
 	{
 		if (this->len >= pPair->downlen) // down string will be all matched
@@ -170,14 +212,14 @@ int CConfig::MatchPair(CPair *pPair, int *arrSelection)
 		}
 		else  // all letters in the config are matched
 		{
-			len = pPair->downlen - this->len; // length of left unmatched dwnn string 
+			len = pPair->downlen - this->len; // length of left unmatched dwnn string
 			if (pPair->uplen>len) // up is longer
 				this->ConfigAssign(pPair->up+len, pPair->uplen-len, 1);
 			else  // down is longer, should change the direction of config
 				this->ConfigAssign(pPair->down+pPair->uplen+this->len, len-pPair->uplen, 0);
 		}
 	}
-	else 
+	else
 	{
 		if (this->len >= pPair->uplen) // up string will be all matched
 		{
@@ -188,7 +230,7 @@ int CConfig::MatchPair(CPair *pPair, int *arrSelection)
         }
 		else  // config will be all matched
 		{
-			len = pPair->uplen - this->len; // length of left unmatched dwnn string 
+			len = pPair->uplen - this->len; // length of left unmatched dwnn string
 			if (pPair->downlen>len) // down is longer
 				this->ConfigAssign(pPair->down+len, pPair->downlen-len, 0);
 			else  // up is longer, should change the direction of config
@@ -196,7 +238,7 @@ int CConfig::MatchPair(CPair *pPair, int *arrSelection)
 		}
 	}
     this->num0 = num0+pPair->diff0;
-	
+
 	// update depth, selection, and number of visited node
     this->depth++;
 	arrSelection[this->depth]=pPair->ID;
@@ -224,7 +266,7 @@ int CConfig::TestMatchingPair(CPair *pPair)
 			if (this->ConfigCmp(pPair->down, pPair->downlen))
      			return -1;
 		}
-		else 
+		else
 		{
 			if (this->ConfigCmp(pPair->down, this->len))
 				return -1;
@@ -236,14 +278,14 @@ int CConfig::TestMatchingPair(CPair *pPair)
 		}
 		configlength = this->len+pPair->uplen - pPair->downlen;
 	}
-	else 
+	else
 	{
 		if (this->len >= pPair->uplen)
 		{
 			if (this->ConfigCmp(pPair->up, pPair->uplen))
 				return -1;
 		}
-		else 
+		else
 		{
 			if (this->ConfigCmp(pPair->up, this->len))
 				return -1;
@@ -257,7 +299,7 @@ int CConfig::TestMatchingPair(CPair *pPair)
 	}
 	return abs(configlength);
 //*/
-/*  
+/*
     int len;
 	register int clen = pConfig->len;
 	register char *down = pPair->down;
@@ -273,39 +315,39 @@ int CConfig::TestMatchingPair(CPair *pPair)
 			if (pConfig->ConfigCmp(down, downlen))
      			return -1;
 		}
-		else 
+		else
 		{
 			if (pConfig->ConfigCmp(down, clen))
 				return -1;
-			
+
 			len = downlen - clen;
 			if (len>uplen) len = uplen;
-			
+
 			if (memcmp(down + clen, up, len*sizeof(char)))
 				return -1;
 		}
-	
+
 		return abs(clen + uplen - downlen);
 	}
-	else 
+	else
 	{
 		if (clen >= uplen)
 		{
 			if (pConfig->ConfigCmp(up, uplen))
 				return -1;
 		}
-		else 
+		else
 		{
 			if (pConfig->ConfigCmp(up, clen))
 				return -1;
-			
+
 			len = uplen - clen;
 			if (len>downlen) len = downlen;
-			
+
 			if (memcmp(up+clen, down, len*sizeof(char)))
 				return -1;
 		}
-		
+
 		return abs(clen + downlen - uplen);
 	}
 */
