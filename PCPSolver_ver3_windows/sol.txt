@@ -1,5 +1,5 @@
 Instance 1:
-3 3 75 2 0.125000
+3 3 75 2 0.062000
 110  1    0    
 1    0    110  
 
@@ -23,12 +23,12 @@ Find the solution in depth: 75 (depth threshold: 75)
   3  1  3  1  1  2  3  2  2  2  2  3  1  3  3  3  3  1  2  1
   3  2  2  1  1  2  3  2  1  3  1  3  3  2  2  3  2  1  2  1
   1  3  3  1  3  2  1  1  1  2  1  1  2  1  1
-Time spent: 0.125000 seconds.
+Time spent: 0.062000 seconds.
 
 
 visited node: 697235, last iteration: 657867
 cutoff node : 4606, last iteration: 3921
-time: 0.125000, last iteration: 0.109000
-Search speed: 5.578M/s, laster iteration: 6.035M/s
+time: 0.062000, last iteration: 0.047000
+Search speed: 11.246M/s, laster iteration: 13.997M/s
 
 Total nodes searched: 697235
